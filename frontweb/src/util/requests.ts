@@ -9,7 +9,7 @@ type Role = 'ROLE_OPERATOR'|'ROLE_ADMIN';
 type TokenData = {  
   exp: number;
   user_name: string;
-  authorities: Role [];
+  authorities: Role[];
 };
 
 type LoginResponse = {
@@ -102,10 +102,9 @@ export const getTokenData = () : TokenData | undefined => {
   catch(error) {
     return undefined;
   }
-};
+}
 
 export const isAuthenticated = () : boolean => {
   const tokenData = getTokenData();
-
   return (tokenData && tokenData.exp * 1000 > Date.now()) ? true : false;
 }

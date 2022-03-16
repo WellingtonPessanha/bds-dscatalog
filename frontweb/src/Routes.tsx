@@ -17,7 +17,7 @@ const Routes = () => (
       <Route path="/products" exact>
         <Catalog />
       </Route>
-      <Route path="/products/:ProductId">
+      <Route path="/products/:productId">
         <ProductDetails />
       </Route>
       <Redirect from="/admin/auth" to="/admin/auth/login" exact />
